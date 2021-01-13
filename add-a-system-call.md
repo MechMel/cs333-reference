@@ -103,7 +103,7 @@ and add the following below `#endif // PDX_XV6`
 8. Add any additionaly files you create to the bottom of the `runoff.list` file like so.
 ```
 # CS333 P#
-nameofsomeheaderyouadded.h
+nameofsomeheaderfileyouadded.h
 nameofsomecfileyouadded.c
 ...
 ```

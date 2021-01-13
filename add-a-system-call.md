@@ -100,10 +100,9 @@ and add the following below `#endif // PDX_XV6`
         #endif // CS333_P#
         ```
         2. Figure out what to do next????
-8. Add any additionaly files you create to the bottom of the `runoff.list` file like so.
+8. Add any additionaly files you create to the bottom of the `runoff.list` file at the the bottom of the `# Portland State` section like so
 ```
-# CS333 P#
 nameofsomeheaderfileyouadded.h
 nameofsomecfileyouadded.c
-...
+etc...
 ```

@@ -11,7 +11,6 @@ This document describes how to create a system call.
 ### Definitions
 - `CS333_P#` is the flag for your current project. The `#` should be replaced with the number of your current project.
 - `nameofsyscall` is the name of your new system call function. It should be short and all lowercase with no hyphens, underscores, or spaces.
-- 
 ### Steps
 1. In `user.h` at the bottom of `// system calls` add
 ```

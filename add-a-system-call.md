@@ -80,23 +80,31 @@ and add the following below `#endif // PDX_XV6`
 7. Do only one of the following
     1. If your actual system call code is going to exclusively exist in `sysproc.c` then do the following
         1. In the `sysproc.c` file at the bottom add
-    ```
-    #ifdef CS333_P#
-    int
-    sys_nameofsyscall(void)
-    {
-      // TODO: Impliment your system call here
-    }
-    #endif // CS333_P#
-    ```
+       ```
+       #ifdef CS333_P#
+       int
+       sys_nameofsyscall(void)
+        {
+          // TODO: Impliment your system call here
+        }
+        #endif // CS333_P#
+        ```
     2. If your actual system call code is going to exist somewhere other than in `sysproc.c` then do the following
         1. In the `sysproc.c` file at the bottom add
-    ```
-    #ifdef CS333_P#
-    int
-    sys_nameofsyscall(void)
-    {
-      return nameofsyscall();
-    }
-    #endif // CS333_P#
-    ```
+        ```
+        #ifdef CS333_P#
+        int
+        sys_nameofsyscall(void)
+        {
+          return nameofsyscall();
+        }
+        #endif // CS333_P#
+        ```
+        2. Figure out what to do next????
+8. Add any additionaly files you create to the bottom of the `runoff.list` file like so.
+```
+# CS333 P#
+nameofsomeheaderyouadded.h
+nameofsomecfileyouadded.c
+...
+```

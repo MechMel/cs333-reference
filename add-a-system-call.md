@@ -78,8 +78,8 @@ and add the following below `#endif // PDX_XV6`
 #endif // CS333_P#
 ```
 7. Do only one of the following
-  1. If your actual system call code is going to exclusively exist in `sysproc.c` then do the following
-    1. In the `sysproc.c` file at the bottom add
+    1. If your actual system call code is going to exclusively exist in `sysproc.c` then do the following
+        1. In the `sysproc.c` file at the bottom add
     ```
     #ifdef CS333_P#
     int
@@ -89,8 +89,8 @@ and add the following below `#endif // PDX_XV6`
     }
     #endif // CS333_P#
     ```
-  2. If your actual system call code is going to exist somewhere other than in `sysproc.c` then do the following
-    1. In the `sysproc.c` file at the bottom add
+    2. If your actual system call code is going to exist somewhere other than in `sysproc.c` then do the following
+        1. In the `sysproc.c` file at the bottom add
     ```
     #ifdef CS333_P#
     int

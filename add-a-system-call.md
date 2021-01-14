@@ -89,7 +89,17 @@ and add the following below `#endif // PDX_XV6`
         #endif // CS333_P#
         ```
     2. If your actual system call code is going to exist somewhere other than in `sysproc.c` then do the following
-        1. In the `sysproc.c` file at the bottom add
+        1. Create a file for your system call implementation named `nameofsyscall.c` and add the following code to it
+        ```
+        #ifdef CS333_P#
+        int
+        nameofsyscall(void or params)
+        {
+          // TODO: Impliment your system call here
+        }
+        #endif // CS333_P#
+        ```
+        2. In the `sysproc.c` file at the bottom add
         ```
         #ifdef CS333_P#
         int
@@ -99,7 +109,13 @@ and add the following below `#endif // PDX_XV6`
         }
         #endif // CS333_P#
         ```
-        2. Figure out what to do next????
+        3. At the botom of the `defs.h` file add
+        ```
+        #ifdef CS333_P#
+        // nameofsyscall.c
+        int            nameofsyscall(void or params);
+        #endif // CS333_P#
+        ```
 8. Add any additionaly files you create to the bottom of the `runoff.list` file at the the bottom of the `# Portland State` section like so
 ```
 nameofsomeheaderfileyouadded.h

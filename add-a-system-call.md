@@ -85,6 +85,7 @@ and add the following below `#endif // PDX_XV6`
        sys_nameofsyscall(void)
         {
           // TODO: Impliment your system call here
+          return -1;
         }
         #endif // CS333_P#
         ```
@@ -96,6 +97,7 @@ and add the following below `#endif // PDX_XV6`
         nameofsyscall(void or params)
         {
           // TODO: Impliment your system call here
+          return -1;
         }
         #endif // CS333_P#
         ```

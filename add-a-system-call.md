@@ -11,11 +11,12 @@ This document describes how to create a system call.
 ### Definitions
 - `CS333_P#` is the flag for your current project. The `#` should be replaced with the number of your current project.
 - `nameofsyscall` is the name of your new system call function. It should be short and all lowercase with no hyphens, underscores, or spaces.
+- `returntype` is the return type of your new system call. Usually it is `int`.
 ### Steps
 1. In `user.h` at the bottom of `// system calls` add
 ```
 #ifdef CS333_P#
-int nameofsyscall(void or params);
+returntype nameofsyscall(void or params);
 #endif // CS333_P#
 ```
 2. At the bottom of `usys.S` add
@@ -85,19 +86,19 @@ and add the following below `#endif // PDX_XV6`
        sys_nameofsyscall(void)
         {
           // TODO: Impliment your system call here
-          return -1;
+          // NOTE: Do not forget to validate input!!!
         }
         #endif // CS333_P#
         ```
     2. If your actual system call code is going to exist somewhere other than in `sysproc.c` then do the following
-        1. Create a file for your system call implementation named `nameofsyscall.c` and add the following code to it
+        1. Add the following code to whatever c file it makes sense for your system call function to exist in.
         ```
         #ifdef CS333_P#
-        int
+        returntype
         nameofsyscall(void or params)
         {
           // TODO: Impliment your system call here
-          return -1;
+          // NOTE: Do not forget to validate input!!!
         }
         #endif // CS333_P#
         ```
@@ -107,6 +108,7 @@ and add the following below `#endif // PDX_XV6`
         int
         sys_nameofsyscall(void)
         {
+          // NOTE: Do not forget to validate input!!!
           return nameofsyscall();
         }
         #endif // CS333_P#
@@ -115,7 +117,7 @@ and add the following below `#endif // PDX_XV6`
         ```
         #ifdef CS333_P#
         // nameofsyscall.c
-        int            nameofsyscall(void or params);
+        returntype            nameofsyscall(void or params);
         #endif // CS333_P#
         ```
 8. Add any additionaly files you create to the bottom of the `runoff.list` file at the the bottom of the `# Portland State` section like so

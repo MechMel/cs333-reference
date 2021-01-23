@@ -91,7 +91,7 @@ and add the following below `#endif // PDX_XV6`
         #endif // CS333_P#
         ```
     2. If your actual system call code is going to exist somewhere other than in `sysproc.c` then do the following
-        1. Add the following code to whatever c file it makes sense for your system call function to exist in.
+        1. Add the following code to whatever c file it makes sense for your system call function to exist in. [Note: if your system call deals with processes, `proc.c` is probably the right place for this code.]
         ```
         #ifdef CS333_P#
         returntype

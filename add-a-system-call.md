@@ -98,7 +98,6 @@ and add the following below `#endif // PDX_XV6`
         nameofsyscall(void or params)
         {
           // TODO: Impliment your system call here
-          // NOTE: Do not forget to validate input!!!
         }
         #endif // CS333_P#
         ```

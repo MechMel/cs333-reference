@@ -112,14 +112,14 @@ and add the following below `#endif // PDX_XV6`
         }
         #endif // CS333_P#
         ```
-        3. At the botom of the `defs.h` file add
+        3. At the bottom of the `defs.h` file add
         ```
         #ifdef CS333_P#
         // nameofsyscall.c
         returntype            nameofsyscall(void or params);
         #endif // CS333_P#
         ```
-8. Add any additionaly files you create to the bottom of the `runoff.list` file at the the bottom of the `# Portland State` section like so
+8. Add any additionally files you create to the bottom of the `runoff.list` file at the the bottom of the `# Portland State` section like so
 ```
 nameofsomeheaderfileyouadded.h
 nameofsomecfileyouadded.c
